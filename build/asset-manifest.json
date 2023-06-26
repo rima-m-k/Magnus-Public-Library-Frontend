@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2e266368.css",
+    "main.js": "/static/js/main.c061c26f.js",
+    "static/media/background.jpg": "/static/media/background.012c16f58a8566f84b56.jpg",
+    "static/media/library.jpg": "/static/media/library.bd137d2e70f703a1a099.jpg",
+    "static/media/avalonlibrary-4.jpg": "/static/media/avalonlibrary-4.ab20215ed419ca66d088.jpg",
+    "static/media/Spinner.gif": "/static/media/Spinner.b546ad65b24af163d9ff.gif",
+    "static/media/UserSpinner.gif": "/static/media/UserSpinner.cd2ae7ed0fb9bcbbd554.gif",
+    "static/media/Default_pfp.png": "/static/media/Default_pfp.5a7970d124a2e0e6fa88.png",
+    "index.html": "/index.html",
+    "main.2e266368.css.map": "/static/css/main.2e266368.css.map",
+    "main.c061c26f.js.map": "/static/js/main.c061c26f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e266368.css",
+    "static/js/main.c061c26f.js"
+  ]
+}
