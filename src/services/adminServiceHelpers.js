@@ -1,6 +1,6 @@
 import axios from "axios";
-const instance = axios.create({baseURL: 'http://localhost:8000/admin/', timeout: 30000, headers: {   Authorization: `Bearer ${localStorage.getItem('AdminData')}`} });
-// const instance = axios.create({baseURL: 'https://api.magnuspubliclibrary.tech/admin/', timeout: 30000, headers: {   Authorization: `Bearer ${localStorage.getItem('AdminData')}`} });
+// const instance = axios.create({baseURL: 'http://localhost:8000/admin/', timeout: 30000, headers: {   Authorization: `Bearer ${localStorage.getItem('AdminData')}`} });
+const instance = axios.create({baseURL: 'https://api.magnuspubliclibrary.tech/admin/', timeout: 30000, headers: {   Authorization: `Bearer ${localStorage.getItem('AdminData')}`} });
 
 
 
