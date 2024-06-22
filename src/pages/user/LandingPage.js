@@ -13,9 +13,7 @@ function LandingPage() {
   return (
     <>
       <BackgroundBanner />
-      {/* <AuthorArticles />
-      <EventComponent />
-      <EmailAskusSupport /> */}
+     
 
       
       <Footer />

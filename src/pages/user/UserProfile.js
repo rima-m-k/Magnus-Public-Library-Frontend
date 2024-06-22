@@ -3,6 +3,8 @@ import { getUserProfile } from '../../services/userServiceHelpers'
 import { Link, useNavigate } from 'react-router-dom';
 import LibraryCardApplication from './LibraryCardApplication';
 import defaultProfile from "../../images/Default_pfp.png"
+import { FiEdit } from 'react-icons/fi';
+
 
 function UserProfile() {
   let token = localStorage.getItem("currentUser")
@@ -71,8 +73,11 @@ function UserProfile() {
                   <img
                     className="w-full h-full object-cover"
                     src={src}
-                    alt="User profile"
+                    alt="User "
                   />
+                  <div className="relative top-1 right-5">
+                    <FiEdit size={25} color='black' />
+                  </div>
                 </div>
               </div>
 
@@ -103,6 +108,8 @@ function UserProfile() {
                         <p className="text-gray-900 font-semibold px-2 ">{UserData?.address[0]?.state},{" "}{UserData?.address[0]?.pincode}</p>
                         <p className="text-gray-900 font-semibold px-2"></p>
                       </div>
+                      <button className='bg-blue-600 hover:bg-blue-700 rounded-sm text-white px-2 py-1'>Edit</button>
+
                     </>
                   }
                 </div>

@@ -40,7 +40,7 @@ function BackgroundBanner() {
                 Welcome to Magnus Public Library
               </h2>
               <div className="pb-4 mb-8 mx-4 px-4">
-                <form className="flex px-5" onSubmit={handleSearch}>
+                {/* <form className="flex px-5" onSubmit={handleSearch}>
                   <input
                     type="text"
                     name="searchTerm"
@@ -54,7 +54,7 @@ function BackgroundBanner() {
                   <button className="bg-custom-olive rounded-r-lg px-5 text-white">
                     SEARCH
                   </button>
-                </form>
+                </form> */}
               </div>
             </div>
           </div>

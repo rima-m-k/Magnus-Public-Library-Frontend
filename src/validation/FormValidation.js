@@ -3,7 +3,7 @@ const checkEmail = (data) => {
   const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const trimmedData = data.trim();
 
-  if (trimmedData.length === 0) {
+  if (trimmedData.length === 0) { 
     err = "This field cannot be empty";
   } else if (!pattern.test(trimmedData)) {
     err = "Invalid email format";

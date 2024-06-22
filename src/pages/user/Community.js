@@ -103,13 +103,12 @@ function Community() {
         </div>
 
 
-        <div className="grid grid-cols-1 ">
+        <div className="grid grid-cols-3 gap-5 ">
           {sortedBlogs.slice((currentPage - 1) * blogsPerPage, currentPage * blogsPerPage).map((blog) => (
-            <div key={blog._id} className=" p-4">
-              <hr className="my-1 border-gray-700" />
-              {/* <Link to=`/communityBlogs/${blog._id}` element={<ViewBlog />} > */}
+            <div key={blog._id} className=" p-4 border border-gray-400 rounded">
+             <Link to={`/communityBlogs/${blog._id}`}  element={<ViewBlog />} >   
+              {/* <hr className="my-1 border-gray-700" /> */}
               <h2 className="text-xl font-bold mb-2">{blog.title}</h2>
-              {/* </Link> */}
               <div className="grid grid-cols-4 gap-4">
                 <div className="col-span-1">
                   {/* <Link to=`/communityBlogs/${blog._id}` element={<ViewBlog />} > */}
@@ -122,13 +121,17 @@ function Community() {
                 <div className="col-span-3 flex flex-col">
                   <p className="text-gray-700 mb-4">
                     {blog.staffId.firstName} {blog.staffId.lastName} &nbsp;|{" "}
+                  </p>
+                  <p className="text-gray-700 mb-4">
+
                     {new Date(blog.PublishDate).toLocaleString("en-US", options)}
                   </p>
-                  <p className="mb-4 mt-2 truncate md:text-clip" dangerouslySetInnerHTML={parseHtmlContent(blog.content)}></p>
+                  {/* <p className="mb-4 mt-2 truncate md:text-clip" dangerouslySetInnerHTML={parseHtmlContent(blog.content)}></p> */}
                 </div>
               </div>
 
-              <hr />
+              {/* <hr /> */}
+              </Link>
             </div>
           ))}
         </div>
