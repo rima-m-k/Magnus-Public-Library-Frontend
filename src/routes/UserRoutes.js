@@ -18,15 +18,30 @@ import PaymentSuccess from "../pages/user/PaymentSuccess";
 
 function UserRoutes() {
   const Navigate = useNavigate()
-  const [token, setToken] = useState(null);
-const [userName,setUserName] = useState('')
+  const [token, setToken] = useState(localStorage.getItem("currentUser"));
+const [userName,setUserName] = useState(localStorage.getItem("userName"))
+  // useEffect(() => {
+  //   setToken(localStorage.getItem("currentUser")); 
+  //   setUserName(localStorage.getItem("userName"));
+  // }, [token,userName]); 
+
   useEffect(() => {
-    setToken(localStorage.getItem("currentUser"));
-    setUserName(localStorage.getItem("userName"));
-  }, [token]);
+    const handleStorageChange = () => {
+      setToken(localStorage.getItem("currentUser"));
+      setUserName(localStorage.getItem("userName"));
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  });
+
   return (
     <>
-    <UserNavigation token={token} userName ={ userName} />
+    <UserNavigation token={token} userName ={userName} />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />

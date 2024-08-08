@@ -16,6 +16,16 @@ function NavMenu({ token, userName }) {
     setShowMenu(!showMenu);
   }
 
+  const handleClick = () => {
+    alert('Span clicked!');
+    //delete token
+    // token=null
+    localStorage.removeItem('currentUser');
+    localStorage.removeItem('userName');
+    token=null
+    userName=''
+    console.log(token)
+  };
   return (
     <>
       <nav className="flex items-center justify-between p-6 bg-custom-green">
@@ -86,22 +96,11 @@ function NavMenu({ token, userName }) {
                           Profile
                         </span>
                       </Link>
-                      {/* <Link to="/admin/viewGenre"  element={<ShowGenre  />}> */}
-                     
-                      <span className="block px-6 py-2 hover:bg-slate-300">
-                        Reading History
-                      </span>
-                      {/* </Link> */}
-                      {/* <Link to="/admin/viewAuthors"  element={<ShowAuthors/>}> */}
-                      <span className="block px-6 py-2 hover:bg-slate-300">
-                        Settings
-                      </span>
-                      {/* </Link> */}
-                      {/* <Link to="/admin/viewBooks"  element={<ShowBooks/>}> */}
-                      <span className="block px-6 py-2 hover:bg-slate-300">
+                      <span  onClick={handleClick}  className="block px-6 py-2 hover:bg-slate-300">
+                      <Link to="/" element={< LandingPage/>}>
                         Logout
+                      </Link>
                       </span>
-                      {/* </Link> */}
                     </div>
                   )}
                 </div>
