@@ -42,7 +42,6 @@ function ViewBooks() {
         setRating(0);
       })
   };
-  // console.log(rating, newReview);
 
   useEffect(() => {
     fetchSingleBook(id)
@@ -300,6 +299,7 @@ function ViewBooks() {
                       src={review.user.profilePhoto? `https://res.cloudinary.com/dtbd0liga/image/upload/v1683611856/${review.user.profilePhoto}`: defaultProfile}
                       alt="User profile"
                     />
+                    {console.log(review.user)}
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between items-center mb-2">{console.log(review.user)}

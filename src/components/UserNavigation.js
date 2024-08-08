@@ -17,14 +17,11 @@ function NavMenu({ token, userName }) {
   }
 
   const handleClick = () => {
-    alert('Span clicked!');
-    //delete token
-    // token=null
+   
     localStorage.removeItem('currentUser');
     localStorage.removeItem('userName');
     token=null
     userName=''
-    console.log(token)
   };
   return (
     <>

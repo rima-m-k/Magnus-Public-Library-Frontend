@@ -18,8 +18,8 @@ import PaymentSuccess from "../pages/user/PaymentSuccess";
 
 function UserRoutes() {
   const Navigate = useNavigate()
-  const [token, setToken] = useState(localStorage.getItem("currentUser"));
-const [userName,setUserName] = useState(localStorage.getItem("userName"))
+  const [token, setToken] = useState(null);
+const [userName,setUserName] = useState('')
   // useEffect(() => {
   //   setToken(localStorage.getItem("currentUser")); 
   //   setUserName(localStorage.getItem("userName"));
@@ -36,6 +36,7 @@ const [userName,setUserName] = useState(localStorage.getItem("userName"))
     // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("storage", handleStorageChange);
+
     };
   });
 
