@@ -20,25 +20,13 @@ function UserRoutes() {
   const Navigate = useNavigate()
   const [token, setToken] = useState(null);
 const [userName,setUserName] = useState('')
-  // useEffect(() => {
-  //   setToken(localStorage.getItem("currentUser")); 
-  //   setUserName(localStorage.getItem("userName"));
-  // }, [token,userName]); 
-
   useEffect(() => {
-    const handleStorageChange = () => {
-      setToken(localStorage.getItem("currentUser"));
-      setUserName(localStorage.getItem("userName"));
-    };
+    setToken(localStorage.getItem("currentUser")); 
+    setUserName(localStorage.getItem("userName"));
+  }, [token,userName]); 
 
-    window.addEventListener("storage", handleStorageChange);
-    
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("storage", handleStorageChange);
-
-    };
-  });
+ 
+  
 
   return (
     <>
