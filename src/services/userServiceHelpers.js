@@ -1,9 +1,11 @@
 import axios from "axios";
 const renderURL='https://magnus-public-library-backend.onrender.com';
+const herokuURL='https://magnus-public-library-backend-db4cff39013f.herokuapp.com/'
+
 // const localhostURL='http://localhost:8000';
 // const awsURL='https://api.magnuspubliclibrary.tech';
- const instance = axios.create({baseURL: renderURL, timeout: 30000, headers: {   Authorization: `Bearer ${localStorage.getItem('currentUser')}`} });
-const client   = axios.create({baseURL: renderURL , timeout: 30000,  headers: {   Authorization: `Bearer ${localStorage.getItem("currentUser")}`, 'Content-Type': 'multipart/form-data'} });
+ const instance = axios.create({baseURL: herokuURL, timeout: 30000, headers: {   Authorization: `Bearer ${localStorage.getItem('currentUser')}`} });
+const client   = axios.create({baseURL: herokuURL , timeout: 30000,  headers: {   Authorization: `Bearer ${localStorage.getItem("currentUser")}`, 'Content-Type': 'multipart/form-data'} });
 
 
 const  userSignup = (userData) =>   instance.post('/userSignup',userData);
